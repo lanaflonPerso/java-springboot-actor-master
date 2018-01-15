@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+<title>Simplon Actor Database</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css" />
+</head>
+<body>
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo"> <span class="symbol"><img
+					src="image/logo-simplon.png" alt="Logo Simplon.co" /></span><span
+				class="title">Simplon.co</span>
+			</a>
+		</div>
+	</header>
+
+	<section id="sectionActor" class="container" style="min-height: 500px">
+
+		<header>
+			<h1>Simplon Actor Database</h1>
+		</header>
+		<article class="col-sm-6 col-xs-12" id="actorDetail">
+			<form class="form-horizontal" id="actor-form">
+				<div class="form-group form-group-lg">
+					<label class="col-sm-2 control-label">id</label>
+					<div class="col-sm-4">
+						<input type="number" class="form-control" id="id" />
+					</div>
+				</div>
+				<div class="form-group form-group-lg">
+					<label class="col-sm-2 control-label">lastUpdate</label>
+					<div class="col-sm-4">
+						<input type="dateTime" class="form-control" id="lastUpdate" />
+					</div>
+				</div>
+				<div class="form-group form-group-lg">
+					<label class="col-sm-2 control-label">Firstname</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="firstname" />
+					</div>
+				</div>
+				<div class="form-group form-group-lg">
+					<label class="col-sm-2 control-label">Lastname</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="lastname" />
+					</div>
+				</div>
+			</form>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<button id="btn-get" class="btn btn-primary btn-lg">GET</button>
+					<button id="btn-post" class="btn btn-primary btn-lg">CREATE</button>
+					<button id="btn-put" class="btn btn-primary btn-lg">UPDATE</button>
+					<button id="btn-delete" class="btn btn-primary btn-lg">DELETE</button>
+					<button id="btn-reset" class="btn btn-primary btn-lg">CLEAR</button>
+				</div>
+			</div>
+			<div id="feedbackactor"></div>
+		</article>
+		<article class="col-sm-6 col-xs-12" id="actorList">
+			<table id="actorTable" class="display">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>firstname</th>
+						<th>lastname</th>
+						<th>lastUpdate</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>id</th>
+						<th>firstname</th>
+						<th>lastname</th>
+						<th>lastUpdate</th>
+					</tr>
+				</tfoot>
+			</table>
+		</article>
+	</section>
+	<footer id="footer" class="container">
+		<p>
+			© <a href="http://www.simplon.co">simplon.co</a> 2017
+		</p>
+	</footer>
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+	<script type="text/javascript" src="js/actor.js"></script>
+</body>
+</html>
